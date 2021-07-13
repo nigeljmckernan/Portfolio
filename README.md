@@ -16,6 +16,6 @@ Here are my current projects with links to their respective code and documentati
 
 ## Master's Thesis
 
-My Master's Thesis examined the **endogenous** link between house prices and air pollution in the Canadian real estate market, and to resolve said endogeneity via meteorological data via 2SLS Panel-Data regression model and temporal disaggregation of certain data.
+My Master's Thesis examined the **endogenous** link between house prices and air pollution in the Canadian real estate market, and to resolve said endogeneity via meteorological data via a 2SLS Panel-Data regression model and temporal disaggregation of certain data.
 
 You can find an HTML-rendered RMarkdown document [here](https://nigelmckernan.ca/media/ma_paper). I will be uploading the R code to this repository at a later date.
