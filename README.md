@@ -14,3 +14,8 @@ Here are my current projects with links to their respective code and documentati
 
 # R
 
+## Master's Thesis
+
+My Master's Thesis examined the **endogenous** link between house prices and air pollution, and to resolve said endogeneity via meteorological data via 2SLS Panel-Data regression model.
+
+You can find an HTML-rendered RMarkdown document [here](https://nigelmckernan.ca/media/ma_paper). I will be uploading the R code to this repository at a later date.
