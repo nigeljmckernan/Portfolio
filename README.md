@@ -19,3 +19,19 @@ Here are my current projects with links to their respective code and documentati
 My Master's Thesis examined the **endogenous** link between house prices and air pollution in the Canadian real estate market, and to resolve said endogeneity via meteorological data via a 2SLS Panel-Data regression model and temporal disaggregation of certain data.
 
 You can find an HTML-rendered RMarkdown document [here](https://nigelmckernan.ca/media/ma_paper). I will be uploading the R code to this repository at a later date.
+
+## [TransLoc API Dashboard](https://github.com/nigeljmckernan/TransLocShinyDashboard)
+
+A simple [Shiny](https://shiny.rstudio.com) dashboard that pulls data from TransLoc's OpenAPI endpoints via the `httr` package. 
+
+My intentions behind this projecy were to gain experience in the world of `HTTP` requests, specifically using the `httr` package to facilitate the ease of `GET` requests to pull data from API's, and perform further unnesting of the underlying JSON data with the `jsonlite` package.
+
+The API contains real-time data about public transportation vehicles and their routes throughout various jurisdictions and municipalities across the United States.
+
+My initial intention with this dashboard was to fit various machine learning models (via the `tidymodels` and `modeltime` ecosystems) for forecasting arrival delays of vehicles.
+
+Via an initial EDA, the data completeness of many columns across the different tables/endpoints tends to be very low, with little information to help impute missing observations.
+
+As such, I've left it as a simple dashboard to pull data on specific transportation agenices, and to plot these agency locations, their jurisdiction bounds, as well as the current locations of their vehicles on [Leaflet](https://rstudio.github.io/leaflet/) maps.
+
+You can find the app [here](https://nigeljmckernan.shinyapps.io/TransportationDashboard/).
