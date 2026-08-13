@@ -2,17 +2,11 @@
 
 Hi there!
 
-My name is Nigel McKernan and I am an aspiring Data Scientist from Winnipeg, Manitoba.
+My name is Nigel McKernan and I am an aspiring Data Scientist from Winnipeg, Manitoba, currently based in Vancouver, British Columbia.
 
 Here you can find my portfolio of projects that I've undertaken on my personal time.
 
-If you would like to see my personal website which includes my CV and Master's Thesis and its corresponding code, please go [here](https://nigelmckernan.ca).
-
-I prefer to work in R, though I am learning Python from  a data science perspective.
-
-Here are my current projects with links to their respective code and documentation in this repository.
-
-# R
+# Projects
 
 ## Master's Thesis
 
@@ -20,23 +14,34 @@ My Master's Thesis examined the **endogenous** link between house prices and air
 
 You can find an HTML-rendered RMarkdown document [here](https://nigelmckernan.ca/media/ma_paper). I will be uploading the R code to this repository at a later date.
 
-## [TransLoc API Dashboard](https://github.com/nigeljmckernan/TransLocShinyDashboard)
 
-A simple [Shiny](https://shiny.rstudio.com) dashboard that pulls data from TransLoc's OpenAPI endpoints via the `httr` package. 
+## [Vancouver 311 Requests Data Engineering Project](https://github.com/nigeljmckernan/van_311_requests_de)
 
-My intentions behind this projecy were to gain experience in the world of `HTTP` requests, specifically using the `httr` package to facilitate the ease of `GET` requests to pull data from API's, and perform further unnesting of the underlying JSON data with the `jsonlite` package.
 
-The API contains real-time data about public transportation vehicles and their routes throughout various jurisdictions and municipalities across the United States.
+A project showcasing my Data Engineering skillset leveraging various technologies.
 
-My initial intention with this dashboard was to fit various machine learning models (via the `tidymodels` and `modeltime` ecosystems) for forecasting arrival delays of vehicles. Also to perform K-means clustering on the vehicles for identifying abstract groups of vehicles per their features.
+The overall goal was to ingest structured data from the City of Vancouver's 311 Requests data from its Open Data portal into a data lake on AWS S3, and from there deploy transformations of that source data across Bronze, Silver, and Gold medallion layers onto Snowflake.
 
-Via an initial EDA, the data completeness of many columns across the different tables/endpoints tends to be very low, with little information to help impute missing observations.
+Ingestion of the source data was mainly handled via modular Python scripts mainly leveraging `requests` and `pandas`.
 
-As such, I've left it as a simple dashboard to pull data on specific transportation agenices, and to plot these agency locations, their jurisdiction bounds, as well as the current locations of their vehicles on [Leaflet](https://rstudio.github.io/leaflet/) maps.
+`dbt` handled all of the transformation logic across both `dev` and `prd` schemas onto Snowflake.
 
-You can find the app [here](https://nigeljmckernan.shinyapps.io/TransportationDashboard/).
+Apache Airflow handled all orchestration of ingest from the API to S3, and subsequently the transformations on Snowflake.
+
+## [Faker Electronics Retailer Data Engineering Project](https://github.com/nigeljmckernan/faker-electronics-retailer-de)
+
+This project was to also showcase my Data Enginering skillset, this time however, using synthetic data generated from a combination of the `faker` and `random` libraries in Python.
+
+I wanted to generate synthetic data of a fictitious electronics retailer to use data from a domain I had 7+ years of experience with: retail & CPG.
+
+Similar set of technologies used compared to [this project](#Vancouver 311 Requests Data Engineering Project), however this time I swapped standard Airflow for Astronomer Cosmos, due to its native integration of `dbt` DAG's and other conveniences.
+
+I likely wouldn't return to a portfolio project where I needed to generate synthetic data with a certain degree of realism needing to be achieved, as this took quite a significant amount of time (even using AI to assist me with the data generation UDF's) for a part of the project where this was _not_ the main focus or goal.
+
 
 ## [Water Point Data Exchange Project](https://github.com/nigeljmckernan/WPDXMLStack)
+
+**NOTE**: This is somewhat of an older project that I undertook a few years ago, and is _not_ representative of my data science and machine learning skills at present. I have included it for posterity 
 
 A project utilizing the Water Point Data Exchange TidyTuesday dataset to fit various machine learning mdoels via the `tidymodels` ecosystem, and also performing ensemble model stacking with the `stacks` package.
 
