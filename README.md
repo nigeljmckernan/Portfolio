@@ -34,7 +34,7 @@ This project was to also showcase my Data Enginering skillset, this time however
 
 I wanted to generate synthetic data of a fictitious electronics retailer to use data from a domain I had 7+ years of experience with: retail & CPG.
 
-Similar set of technologies used compared to [this project](#Vancouver 311 Requests Data Engineering Project), however this time I swapped standard Airflow for Astronomer Cosmos, due to its native integration of `dbt` DAG's and other conveniences.
+Similar set of technologies used compared to [this project](#vancouver-311-requests-data-engineering-project), however this time I swapped standard Airflow for Astronomer Cosmos, due to its native integration of `dbt` DAG's and other conveniences.
 
 I likely wouldn't return to a portfolio project where I needed to generate synthetic data with a certain degree of realism needing to be achieved, as this took quite a significant amount of time (even using AI to assist me with the data generation UDF's) for a part of the project where this was _not_ the main focus or goal.
 
